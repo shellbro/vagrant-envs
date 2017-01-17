@@ -1,5 +1,11 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "centos/7"
+  config.vm.define "system1" do |system1|
+    system1.vm.box = "centos/7"
+  end
+
+  config.vm.define "system2" do |system2|
+    system2.vm.box = "centos/7"
+  end
 
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
