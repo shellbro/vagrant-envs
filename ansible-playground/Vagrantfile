@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
       s.inline = "dnf -y install python python2-dnf libselinux-python"
     end
     system1.vm.provision "ansible" do |a|
-      a.playbook = "playbook.yml"
+      a.playbook = "site.yml"
       a.sudo = true
     end
   end
@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "system2" do |system2|
     system2.vm.box = "centos/7"
     system2.vm.provision "ansible" do |a|
-      a.playbook = "playbook.yml"
+      a.playbook = "site.yml"
       a.sudo = true
     end
   end
