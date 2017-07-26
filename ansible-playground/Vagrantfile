@@ -17,7 +17,6 @@ Vagrant.configure("2") do |config|
     debian.vm.provision "ansible" do |a|
       a.limit = "all"
       a.playbook = "site.yml"
-      a.sudo = true
     end
   end
 end
