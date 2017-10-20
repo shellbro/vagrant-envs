@@ -1,2 +1,4 @@
-# vagrant-envs
+vagrant-envs
+============
+
 My Vagrant environments.
